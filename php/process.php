@@ -36,7 +36,7 @@ try {
     $fields{"subject"} = "Subject";
     $fields{"message"} = "Message";
 
-    $body = "Here is the message from yourwebsite:\n\n"; foreach($fields as $a => $b){   $body .= sprintf("%20s: %s\n",$b,$_REQUEST[$a]); }
+    $body = "Here is the message from elsondos.com:\n\n"; foreach($fields as $a => $b){   $body .= sprintf("%20s: %s\n",$b,$_REQUEST[$a]); }
 
     $mail->Body    = $body;
     $mail->AltBody = $body;
