@@ -14,16 +14,16 @@ try {
     //Server settings
     //$mail->SMTPDebug = 2;                                       // Enable verbose debug output
     $mail->isSMTP();                                            // Set mailer to use SMTP
-    $mail->Host       = 'smtp.mail.yahoo.com';  			// Specify main and backup SMTP servers
+    $mail->Host       = 'admin.elsondos.com';  			// Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'katmerayt@yahoo.com';                     // SMTP username
-    $mail->Password   = 'mypassword';                               // SMTP password
+    $mail->Username   = 'mostafa@admin.elsondos.com';                     // SMTP username
+    $mail->Password   = 'RQg2sP$aAriZ';                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-    $mail->Port       = 465;                                    // TCP port to connect to
+    $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('katmerayt@yahoo.com');
-    $mail->addAddress('katmerayt@yahoo.com');     // Add a recipient
+    $mail->setFrom('mostafa@admin.elsondos.com');
+    $mail->addAddress('mostafa@admin.elsondos.com');     // Add a recipient
     $mail->addReplyTo($_REQUEST['email'], $_REQUEST['name']);
 
     // Content
@@ -36,7 +36,7 @@ try {
     $fields{"subject"} = "Subject";
     $fields{"message"} = "Message";
 
-    $body = "Here is the message from yourwebsite:\n\n"; foreach($fields as $a => $b){   $body .= sprintf("%20s: %s\n",$b,$_REQUEST[$a]); }
+    $body = "Here is the message from elsondos.com:\n\n"; foreach($fields as $a => $b){   $body .= sprintf("%20s: %s\n",$b,$_REQUEST[$a]); }
 
     $mail->Body    = $body;
     $mail->AltBody = $body;
